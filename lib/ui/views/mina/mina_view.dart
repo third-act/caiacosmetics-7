@@ -1,10 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lucide_icons_flutter/lucide_icons.dart';
 
-import '../../common/app_colors.dart';
-import '../../common/app_haptics.dart';
-import '../../common/app_shadows.dart';
-import '../../common/app_space.dart';
 import '../../kit.dart';
 
 /// Profil och favoriter — stat band bryter stacken.
@@ -62,8 +58,8 @@ class MinaView extends StatelessWidget {
                   borderRadius: BorderRadius.circular(AppRadius.card),
                   boxShadow: AppShadows.cardShadow,
                 ),
-                child: Row(
-                  children: const [
+                child: const Row(
+                  children: [
                     _StatBand(label: 'Scanningar', value: '12'),
                     _StatDivider(),
                     _StatBand(label: 'Favoriter', value: '8'),
@@ -73,14 +69,14 @@ class MinaView extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: AppSpace.section),
-              SectionHeader(title: 'Favoriter'),
+              const SectionHeader(title: 'Favoriter'),
               const SizedBox(height: AppSpace.lg),
               PressableCard(
                 padding: const EdgeInsets.all(AppSpace.md),
                 onTap: () => AppHaptics.light(),
                 child: Row(
                   children: [
-                    SizedBox(
+                    const SizedBox(
                       width: 64,
                       child: PlateImage(
                         asset: 'assets/images/produkt-serum-foundation.jpg',
@@ -112,7 +108,7 @@ class MinaView extends StatelessWidget {
                 onTap: () => AppHaptics.light(),
                 child: Row(
                   children: [
-                    SizedBox(
+                    const SizedBox(
                       width: 64,
                       child: PlateImage(
                         asset: 'assets/images/produkt-glow-blush.jpg',
@@ -139,19 +135,19 @@ class MinaView extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: AppSpace.section),
-              SectionHeader(title: 'Profil'),
+              const SectionHeader(title: 'Profil'),
               const SizedBox(height: AppSpace.lg),
-              _ProfilRad(
+              const _ProfilRad(
                 icon: LucideIcons.scanFace,
                 title: 'Hudprofil',
                 subtitle: 'Normal · varm underton',
               ),
-              _ProfilRad(
+              const _ProfilRad(
                 icon: LucideIcons.bell,
                 title: 'Notiser',
                 subtitle: 'Produktnyheter och tips',
               ),
-              _ProfilRad(
+              const _ProfilRad(
                 icon: LucideIcons.package,
                 title: 'Beställningar',
                 subtitle: 'Senaste leverans 3 sep',

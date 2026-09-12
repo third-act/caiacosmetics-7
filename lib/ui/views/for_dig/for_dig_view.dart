@@ -1,10 +1,6 @@
 import 'package:flutter/material.dart';
 
 import '../../../data/products.dart';
-import '../../common/app_colors.dart';
-import '../../common/app_haptics.dart';
-import '../../common/app_shadows.dart';
-import '../../common/app_space.dart';
 import '../../kit.dart';
 
 /// Rekommendationer — 2×2 wrap med distinkta produktbilder.
@@ -65,11 +61,11 @@ class ForDigView extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: AppSpace.section),
-              SectionHeader(title: 'Rekommendationer'),
+              const SectionHeader(title: 'Rekommendationer'),
               const SizedBox(height: AppSpace.lg),
               LayoutBuilder(
                 builder: (context, constraints) {
-                  final gap = AppSpace.md;
+                  const gap = AppSpace.md;
                   final cellW = (constraints.maxWidth - gap) / 2;
                   return Wrap(
                     spacing: gap,

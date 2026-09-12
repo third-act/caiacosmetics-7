@@ -1,12 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lucide_icons_flutter/lucide_icons.dart';
 
-import '../../common/app_async.dart';
-import '../../common/app_colors.dart';
-import '../../common/app_haptics.dart';
-import '../../common/app_motion.dart';
-import '../../common/app_shadows.dart';
-import '../../common/app_space.dart';
 import '../../kit.dart';
 
 /// Signaturmomentet: ansiktsscan med oval ram. Accent-owned surface på kontrollbandet.

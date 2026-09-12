@@ -2,11 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:lucide_icons_flutter/lucide_icons.dart';
 
 import '../../../data/products.dart';
-import '../../common/app_colors.dart';
-import '../../common/app_haptics.dart';
-import '../../common/app_motion.dart';
-import '../../common/app_shadows.dart';
-import '../../common/app_space.dart';
 import '../../kit.dart';
 import '../../splash/splash_view.dart';
 
@@ -70,14 +65,14 @@ class HemView extends StatelessWidget {
                         ],
                       ),
                     ),
-                    Padding(
-                      padding: const EdgeInsets.all(AppSpace.lg),
+                    const Padding(
+                      padding: EdgeInsets.all(AppSpace.lg),
                       child: Row(
                         children: [
                           _StatChip(label: 'Fukt', value: '72'),
-                          const SizedBox(width: AppSpace.md),
+                          SizedBox(width: AppSpace.md),
                           _StatChip(label: 'Jämnhet', value: '81'),
-                          const SizedBox(width: AppSpace.md),
+                          SizedBox(width: AppSpace.md),
                           _StatChip(label: 'Lyster', value: '87'),
                         ],
                       ),
@@ -138,7 +133,7 @@ class HemView extends StatelessWidget {
                 ],
               ),
               const SizedBox(height: AppSpace.section),
-              SectionHeader(title: 'Matchat för din hud'),
+              const SectionHeader(title: 'Matchat för din hud'),
               const SizedBox(height: AppSpace.sm),
               Text(
                 'Baserat på din senaste scanning.',
@@ -184,7 +179,7 @@ class HemView extends StatelessWidget {
                       ),
                     ),
                     const SizedBox(width: AppSpace.md),
-                    SizedBox(
+                    const SizedBox(
                       width: 88,
                       child: PlateImage(
                         asset: 'assets/images/hero-store.jpg',

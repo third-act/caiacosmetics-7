@@ -8,11 +8,11 @@ class BrandTokens {
   static const direction = 'soft-depth';
   static const isDark = false;
 
-  static const String? displayFamily = 'Artico';
-  static const String? bodyFamily = 'Artico';
+  static const String displayFamily = 'Artico';
+  static const String bodyFamily = 'Artico';
 
   static const logoAsset = 'assets/brand/logo.png';
   static const logoHeaderHeight = 22.0;
 
-  static const String? splashHero = 'assets/images/hero-portrait.jpg';
+  static const String splashHero = 'assets/images/hero-portrait.jpg';
 }

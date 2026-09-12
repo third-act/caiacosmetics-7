@@ -80,35 +80,33 @@ class _SplashOverlayState extends State<_SplashOverlay>
 
   @override
   Widget build(BuildContext context) {
-    final hero = BrandTokens.splashHero;
+    const hero = BrandTokens.splashHero;
     return ColoredBox(
       color: AppColors.bg.withOpacity(0.72),
       child: Stack(
         fit: StackFit.expand,
         children: [
-          if (hero != null)
-            Image.asset(
-              hero,
-              fit: BoxFit.cover,
-              alignment: const Alignment(0.1, -0.2),
-              errorBuilder: (context, error, stack) => const ColoredBox(color: AppColors.bg),
-            ),
-          if (hero != null)
-            const DecoratedBox(
-              decoration: BoxDecoration(
-                gradient: LinearGradient(
-                  begin: Alignment.topCenter,
-                  end: Alignment.bottomCenter,
-                  stops: [0.0, 0.45, 0.75, 1.0],
-                  colors: [
-                    Color(0x33FFFCF7),
-                    Color(0x00FFFCF7),
-                    Color(0xB3FFFCF7),
-                    Color(0xF2FFFCF7),
-                  ],
-                ),
+          Image.asset(
+            hero,
+            fit: BoxFit.cover,
+            alignment: const Alignment(0.1, -0.2),
+            errorBuilder: (context, error, stack) => const ColoredBox(color: AppColors.bg),
+          ),
+          const DecoratedBox(
+            decoration: BoxDecoration(
+              gradient: LinearGradient(
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+                stops: [0.0, 0.45, 0.75, 1.0],
+                colors: [
+                  Color(0x33FFFCF7),
+                  Color(0x00FFFCF7),
+                  Color(0xB3FFFCF7),
+                  Color(0xF2FFFCF7),
+                ],
               ),
             ),
+          ),
           SafeArea(
             child: Align(
               alignment: Alignment.bottomLeft,

@@ -12,7 +12,7 @@ class AppTheme {
   AppTheme._();
 
   static ThemeData build() {
-    final dark = BrandTokens.isDark;
+    const dark = BrandTokens.isDark;
     final base = ThemeData(
       useMaterial3: true,
       brightness: dark ? Brightness.dark : Brightness.light,
@@ -21,8 +21,8 @@ class AppTheme {
 
     return base.copyWith(
       scaffoldBackgroundColor: AppColors.bg,
-      colorScheme: ColorScheme(
-        brightness: dark ? Brightness.dark : Brightness.light,
+      colorScheme: const ColorScheme(
+        brightness: Brightness.light,
         primary: AppColors.accent,
         onPrimary: AppColors.onAccent,
         secondary: AppColors.accent,
@@ -42,15 +42,14 @@ class AppTheme {
           TargetPlatform.linux: FadeUpwardsPageTransitionsBuilder(),
         },
       ),
-      appBarTheme: AppBarTheme(
+      appBarTheme: const AppBarTheme(
         elevation: 0,
         scrolledUnderElevation: 0,
         backgroundColor: Colors.transparent,
         foregroundColor: AppColors.ink,
         surfaceTintColor: Colors.transparent,
         centerTitle: true,
-        systemOverlayStyle:
-            dark ? SystemUiOverlayStyle.light : SystemUiOverlayStyle.dark,
+        systemOverlayStyle: SystemUiOverlayStyle.dark,
       ),
       cardTheme: CardTheme(
         color: AppColors.surface,
